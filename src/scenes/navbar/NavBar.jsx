@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useState } from "react";
+import {
+  Box,
+  IconButton,
+  InputBase,
+  Typography,
+  Select,
+  MenuItem,
+  FormControl,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import {
+  Search,
+  Message,
+  DarkMode,
+  LightMode,
+  Notifications,
+  Help,
+  Menu,
+  Close,
+} from "@mui/icons-material";
+
+import { useDispatch, useSelector } from "react-redux";
 
 const NavBar = () => {
-  return (
-    <div>NavBar</div>
-  )
-}
+  return <div>NavBar</div>;
+};
 
-export default NavBar
+export default NavBar;
