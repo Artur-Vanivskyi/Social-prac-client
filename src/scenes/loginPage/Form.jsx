@@ -98,15 +98,13 @@ const Form = () => {
                   helperText={touched.firstName && errors.firstName}
                   sx={{ gridColumn: "span 2" }}
                 />
-                 <TextField
+                <TextField
                   label="Last Name"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.lastName}
                   name="lastName"
-                  error={
-                    Boolean(touched.lastName) && Boolean(errors.lastName)
-                  }
+                  error={Boolean(touched.lastName) && Boolean(errors.lastName)}
                   helperText={touched.lastName && errors.lastName}
                   sx={{ gridColumn: "span 2" }}
                 />
@@ -116,9 +114,7 @@ const Form = () => {
                   onChange={handleChange}
                   value={values.lastName}
                   name="firstName"
-                  error={
-                    Boolean(touched.lastName) && Boolean(errors.lastName)
-                  }
+                  error={Boolean(touched.lastName) && Boolean(errors.lastName)}
                   helperText={touched.lastName && errors.lastName}
                   sx={{ gridColumn: "span 2" }}
                 />
@@ -128,9 +124,7 @@ const Form = () => {
                   onChange={handleChange}
                   value={values.location}
                   name="location"
-                  error={
-                    Boolean(touched.location) && Boolean(errors.location)
-                  }
+                  error={Boolean(touched.location) && Boolean(errors.location)}
                   helperText={touched.location && errors.location}
                   sx={{ gridColumn: "span 4" }}
                 />
@@ -182,8 +176,7 @@ const Form = () => {
               </>
             )}
 
-
-<TextField
+            <TextField
               label="Email"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -204,10 +197,41 @@ const Form = () => {
               helperText={touched.password && errors.password}
               sx={{ gridColumn: "span 4" }}
             />
-
-
           </Box>
-          
+          {/* BUTTONS */}
+          <Box>
+            <Button
+              fullWidth
+              type="submit"
+              sx={{
+                m: "2rem 0",
+                p: "1rem",
+                backgroundColor: palette.primary.main,
+                color: palette.background.alt,
+                "&:hover": { color: palette.primary.main },
+              }}
+            >
+              {isLogin ? "LOGIN" : "REGISTER"}
+            </Button>
+            <Typography
+              onClick={() => {
+                setPageType(isLogin ? "register" : "login");
+                resetForm();
+              }}
+              sx={{
+                textDecoration: "underline",
+                color: palette.primary.main,
+                "&:hover": {
+                  cursor: "pointer",
+                  color: palette.primary.light,
+                },
+              }}
+            >
+              {isLogin
+                ? "Don't have an account? Sign Up here."
+                : "Already have an account? Login here."}
+            </Typography>
+          </Box>
         </form>
       )}
     </Formic>
