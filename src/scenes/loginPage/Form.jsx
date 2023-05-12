@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -8,15 +8,13 @@ import {
   useTheme,
 } from "@mui/material";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
-import { Formic } from "formik";
+import { Formik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setLogin } from "state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "components/FlexBetween";
-
-// using yup to validate
 
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),
@@ -58,6 +56,7 @@ const Form = () => {
   const isRegister = pageType === "register";
 
   const register = async (values, onSubmitProps) => {
+    // this allows us to send form info with image
     const formData = new FormData();
     for (let value in values) {
       formData.append(value, values[value]);
@@ -72,8 +71,6 @@ const Form = () => {
       }
     );
     const savedUser = await savedUserResponse.json();
-
-    //coming from Formic
     onSubmitProps.resetForm();
 
     if (savedUser) {
@@ -87,10 +84,8 @@ const Form = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     });
-
     const loggedIn = await loggedInResponse.json();
     onSubmitProps.resetForm();
-
     if (loggedIn) {
       dispatch(
         setLogin({
@@ -108,7 +103,7 @@ const Form = () => {
   };
 
   return (
-    <Formic
+    <Formik
       onSubmit={handleFormSubmit}
       initialValues={isLogin ? initialValuesLogin : initialValuesRegister}
       validationSchema={isLogin ? loginSchema : registerSchema}
@@ -141,7 +136,7 @@ const Form = () => {
                   value={values.firstName}
                   name="firstName"
                   error={
-                    Boolean(touched.firstName) && Boolean(errors.firstname)
+                    Boolean(touched.firstName) && Boolean(errors.firstName)
                   }
                   helperText={touched.firstName && errors.firstName}
                   sx={{ gridColumn: "span 2" }}
@@ -152,16 +147,6 @@ const Form = () => {
                   onChange={handleChange}
                   value={values.lastName}
                   name="lastName"
-                  error={Boolean(touched.lastName) && Boolean(errors.lastName)}
-                  helperText={touched.lastName && errors.lastName}
-                  sx={{ gridColumn: "span 2" }}
-                />
-                <TextField
-                  label="Last Name"
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                  value={values.lastName}
-                  name="firstName"
                   error={Boolean(touched.lastName) && Boolean(errors.lastName)}
                   helperText={touched.lastName && errors.lastName}
                   sx={{ gridColumn: "span 2" }}
@@ -246,6 +231,7 @@ const Form = () => {
               sx={{ gridColumn: "span 4" }}
             />
           </Box>
+
           {/* BUTTONS */}
           <Box>
             <Button
@@ -282,7 +268,7 @@ const Form = () => {
           </Box>
         </form>
       )}
-    </Formic>
+    </Formik>
   );
 };
 
