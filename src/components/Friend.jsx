@@ -7,7 +7,7 @@ import { setFriends } from "state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
 
-const Friend = () => {
+const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { _id } = useSelector((state) => state.user);
@@ -20,7 +20,8 @@ const Friend = () => {
   const main = palette.neutral.main;
   const medium = palette.neutral.medium;
 
-  return <div>Friend</div>;
+  const isFriend = friends.find((friend) => friend._id === friendId);
+  
 };
 
 export default Friend;
