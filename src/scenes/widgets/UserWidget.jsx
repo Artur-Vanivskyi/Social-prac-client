@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import {
-  ManageAccountsOutLined,
+  ManageAccountsOutlined,
   EditOutlined,
   LocationOnOutlined,
   WorkOutlineOutlined,
@@ -75,7 +75,7 @@ const UserWidget = ({ userId, picturePath }) => {
             <Typography color={medium}>{friends.length}</Typography>
           </Box>
         </FlexBetween>
-        <ManageAccountsOutLined />
+        <ManageAccountsOutlined />
       </FlexBetween>
       <Divider />
 
