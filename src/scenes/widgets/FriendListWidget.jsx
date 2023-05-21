@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
 import { Box, Typography, useTheme } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { setFriends } from "state";
-
 import Friend from "components/Friend";
 import WidgetWrapper from "components/WidgetWrapper";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setFriends } from "state";
 
 const FriendListWidget = ({ userId }) => {
   const dispatch = useDispatch();
@@ -26,7 +25,7 @@ const FriendListWidget = ({ userId }) => {
 
   useEffect(() => {
     getFriends();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <WidgetWrapper>

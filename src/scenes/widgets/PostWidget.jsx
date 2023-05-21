@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   ChatBubbleOutlineOutlined,
   FavoriteBorderOutlined,
@@ -7,11 +6,11 @@ import {
 } from "@mui/icons-material";
 import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
+import Friend from "components/Friend";
 import WidgetWrapper from "components/WidgetWrapper";
-
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "state";
-import Friend from "components/Friend";
 
 const PostWidget = ({
   postId,
@@ -29,7 +28,7 @@ const PostWidget = ({
   const token = useSelector((state) => state.token);
   const loggedInUserId = useSelector((state) => state.user._id);
   const isLiked = Boolean(likes[loggedInUserId]);
-  const likeCount = Object.keys(likes.length);
+  const likeCount = Object.keys(likes).length;
 
   const { palette } = useTheme();
   const main = palette.neutral.main;
@@ -44,7 +43,6 @@ const PostWidget = ({
       },
       body: JSON.stringify({ userId: loggedInUserId }),
     });
-
     const updatedPost = await response.json();
     dispatch(setPost({ post: updatedPost }));
   };
