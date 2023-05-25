@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "state";
 import PostWidget from "./PostWidget";
+import { API_BASE_URL } from "utils/utils";
 
 const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
