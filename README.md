@@ -28,6 +28,16 @@ _Font end:_
 <br />
 
 ## Features
+### Details about functionality:
+> The application offers the following functionality: creating a new user profile, which requires providing a first and last name, location, and occupation. Additionally, users can upload a profile picture using React Dropzone and multer for seamless file handling. The user is also required to provide an email and password during the profile creation process. All the user information is stored in MongoDB, and the backend is built using Node.js.
+>  <br />
+>  Once logged in, users have various options available to them. They can view their own profile, access their friend list, browse a list of posts, and create their own posts. When viewing a list of posts, users can like or unlike other users' posts, enabling them to interact with the content. The application also allows users to add or remove friends from their list and switch between light and dark modes for personalization. Users can navigate to their profile page exclusively or log out from the platform.
+>  <br />
+>   While creating a post, users are prompted to provide a description and upload an image, after which they can press a button to create the post. Redux is employed to manage state and ensure clean code organization. Material UI is utilized to create a professional, clean, and user-friendly UI design. The form data is validated using Yup, ensuring that the provided information is accurate and meets the required criteria.
+>   <br />
+>   Overall, the application offers a comprehensive set of features, leveraging modern technologies and frameworks to deliver an efficient and enjoyable user experience.
+
+
 ### Create Profile
 
 ![Create Profile](https://github.com/Artur-Vanivskyi/Social-prac-client/assets/106690298/83a19e57-17bb-48d4-94b2-4e93362aba3f)
