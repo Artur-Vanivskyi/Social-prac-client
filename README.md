@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Social Club - platform to make friends
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+Social Club is a dynamic platform designed to facilitate the formation of meaningful connections with individuals seeking to cultivate enjoyable friendships. Our innovative platform not only allows you to effortlessly expand your network of friends but also provides you with efficient tools to manage and organize your friend list. At Social Club, fostering a sense of amusement and camaraderie is at the forefront of our mission. With intuitive interface, you can easily share your thoughts, ideas, and experiences through posts, while encouraging active engagement from your friends. Their valuable insights and comments will enrich your interactions, sparking engaging discussions and fostering a sense of community.
+Creating a personalized profile on Social Club offers you the opportunity to curate and showcase your unique personality and interests. Seamlessly tracking your activities and milestones becomes a breeze, ensuring that you can reflect upon and relish the experiences that shape your journey.
+<br />
 
-## Available Scripts
+#
+## Active Example
+* Netlify.com(fronend): https://socialclub1.netlify.app
+* Render.com(backend): https://socila-club-server.onrender.com
+* Github Code Frontend: https://github.com/Artur-Vanivskyi/Social-prac-client.git
+* Github Code Backend: https://github.com/Artur-Vanivskyi/Social-prac-server.git
 
-In the project directory, you can run:
 
-### `npm start`
+## Technologies used
+_Back end:_
+1. Node
+1. Express
+1. MongoDB
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+_Font end:_
+1. React (hooks, router, icons, dropzone etc...)
+1. Material UI
+1. Redux
+1. Formik
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br />
 
-### `npm test`
+## Features
+### Create Profile
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Create Profile](https://github.com/Artur-Vanivskyi/Social-prac-client/assets/106690298/83a19e57-17bb-48d4-94b2-4e93362aba3f)
+<br />
 
-### `npm run build`
+### Login Profile
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Login Profile](https://github.com/Artur-Vanivskyi/Social-prac-client/assets/106690298/83fc4f56-bbd5-472d-8a83-9b7b80ac90a2)
+<br />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Profile page light and dark mode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Light Mode](https://github.com/Artur-Vanivskyi/Social-prac-client/assets/106690298/7e739768-257a-47b6-986d-24500a206aab)
 
-### `npm run eject`
+![Dark Mode](https://github.com/Artur-Vanivskyi/Social-prac-client/assets/106690298/78d6a2e5-a87b-4331-bb35-7c84211c77c6)
+<br />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Make a post
+![Make Post](https://github.com/Artur-Vanivskyi/Social-prac-client/assets/106690298/fc49ac1a-6670-4150-aaba-165ea0803673)
+<br />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
+1. Fork and clone this repository.
+2. Update the `./client/.env`
+3. Update the `./server/.env` file with the connection URL's to your MongoDB database instance.
+4. Run `npm install` to install project dependencies.
+5. Run `npm start` to start your client and server in development mode.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
